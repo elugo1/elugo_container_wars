@@ -18,13 +18,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xInp = Input.GetAxis("Horizontal");
+        // float xInp = Input.GetAxis("Horizontal");
         float yInp = Input.GetAxis("Vertical");
 
 
-        if(Mathf.Abs(xInp)>0){
-            body.velocity = new Vector2(xInp *speed, body.velocity.y);
-        }
+        // if(Mathf.Abs(xInp)>0){
+        //     body.velocity = new Vector2(xInp *speed, body.velocity.y);
+        // }
         if (Mathf.Abs(yInp)>0){
             body.velocity = new Vector2(body.velocity.x,yInp *speed);
         }
