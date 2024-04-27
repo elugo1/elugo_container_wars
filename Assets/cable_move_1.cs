@@ -1,8 +1,9 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Container_move : MonoBehaviour
+public class cable_move_1 : MonoBehaviour
 {
 
     public float speed;
@@ -20,7 +21,7 @@ public class Container_move : MonoBehaviour
         float yInp = Input.GetAxis("Vertical");
 
         // Modify the horizontal velocity based on vertical input
-        body.velocity = new Vector2(yInp * speed *2,xInp*speed);    
+        body.velocity = new Vector2(yInp * speed *2,0);    
         
         }
 }
