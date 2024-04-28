@@ -20,6 +20,6 @@ public class Container_move2 : MonoBehaviour
         float yInp = Input.GetAxis("Vertical1");
 
         // Modify the horizontal velocity based on vertical input
-        body.velocity = new Vector2(yInp * speed,xInp*speed);    
+        body.velocity = new Vector2(-1*yInp * speed*2,xInp*speed);    
     }
 }

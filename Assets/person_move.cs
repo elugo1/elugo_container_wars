@@ -2,23 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gear_rotate_1 : MonoBehaviour
+public class person_move : MonoBehaviour
 {
+    // Start is called before the first frame update
     public Transform targetObject; // Reference to the GameObject whose x-value you want to reference
-
 
     void Start()
     {
-        // Get the Rigidbody component attached to the object
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-    // Check if the targetObject is not null
+       // Check if the targetObject is not null
         if (targetObject != null)
         {
             // Set the x-position of this GameObject to be the same as the x-position of the targetObject
-            transform.localRotation = Quaternion.Euler(new Vector3(0,0, targetObject.position.y*100));
+            transform.position = new Vector3(targetObject.position.x, targetObject.position.y + 0.35F, transform.position.z);
         }
         else
         {
