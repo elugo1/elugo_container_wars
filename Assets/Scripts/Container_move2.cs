@@ -6,6 +6,8 @@ public class Container_move2 : MonoBehaviour
 {
 
     public float speed;
+        private Vector3 originalPosition; // Store the original position of the object
+
     public Rigidbody2D body;
     // Start is called before the first frame update
     void Start()

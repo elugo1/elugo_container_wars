@@ -24,6 +24,10 @@ public class cable_move : MonoBehaviour
         {
             Debug.LogWarning("Target object is null. Please assign a GameObject to targetObject variable.");
         }
+
+        if (Time.timeScale == 0f){
+            transform.position = new Vector3(1,0.09f,1.75f);
+        }
     }
 }
 
