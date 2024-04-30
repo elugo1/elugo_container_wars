@@ -7,7 +7,7 @@ public class Container_move : MonoBehaviour
 
     public float speed;
     public Rigidbody2D body;
-        private Vector3 originalPosition; // Store the original position of the object
+    private Vector3 originalPosition; // Store the original position of the object
     // Start is called before the first frame update
     void Start()
     {

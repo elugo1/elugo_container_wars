@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class person_move : MonoBehaviour
+public class cable_move2 : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform targetObject; // Reference to the GameObject whose x-value you want to reference
-
     void Start()
     {
         
@@ -15,15 +14,20 @@ public class person_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // Check if the targetObject is not null
+        // Check if the targetObject is not null
         if (targetObject != null)
         {
             // Set the x-position of this GameObject to be the same as the x-position of the targetObject
-            transform.position = new Vector3(targetObject.position.x, targetObject.position.y + 0.37F, transform.position.z);
+            transform.position = new Vector3(targetObject.position.x, transform.position.y, transform.position.z);
         }
         else
         {
             Debug.LogWarning("Target object is null. Please assign a GameObject to targetObject variable.");
         }
+
+        if (Time.timeScale == 0f){
+            transform.position = new Vector3(-1,0.1f,1.75f);
+        }
     }
 }
+

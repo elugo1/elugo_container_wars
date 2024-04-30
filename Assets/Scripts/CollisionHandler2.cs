@@ -3,6 +3,7 @@ using UnityEngine;
 public class TriggerHandler2 : MonoBehaviour
 {
     private bool isGamePaused = false;
+    public bool p1point = true;
     private int scorep2 = 0;
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -15,6 +16,7 @@ public class TriggerHandler2 : MonoBehaviour
 
             // Increment score
             scorep2++;
+            p1point = true;
 
             // Print score (You can replace this with your desired point registration logic)
             Debug.Log("Score P2s: " + scorep2);
@@ -35,6 +37,7 @@ public class TriggerHandler2 : MonoBehaviour
         // Resume the game
         Time.timeScale = 1f;
         isGamePaused = false;
+        p1point = false;
     }
 }
 

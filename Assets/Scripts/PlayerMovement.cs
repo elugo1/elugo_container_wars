@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(yInp)>0){
             body.velocity = new Vector2(body.velocity.x,yInp *speed);
         }
-
+                if (Time.timeScale == 0f){
+            transform.position = new Vector3(2.57f,0.2f,0);
+        }
     }
 }
